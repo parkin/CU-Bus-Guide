@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!-- Replace the z's with your API keys! -->
     <string name="api_key_maps">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</string>
     <string name="api_key_places">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</string>
     <string name="api_key_streetview">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</string>
