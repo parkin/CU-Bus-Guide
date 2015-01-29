@@ -4,7 +4,7 @@ Champaign-Urbana's unofficial CUMTD Android app!
 
 **[Install on Google Play](https://play.google.com/store/apps/details?id=com.teamparkin.mtdapp)**
 
-*Note:* Versions for Android tools, gradle, etc. were hastily upgraded before dumping the project to GitHub.
+*Note:* Version numbers for Android tools, gradle, etc. were hastily increased before dumping the project to GitHub.
 Therefore, some of the functionality of this code may be different/broken compared to the version currently on the Play Store. This will be fixed.
 
 ## Development
