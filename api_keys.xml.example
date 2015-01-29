@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="api_key_maps">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</string>
+    <string name="api_key_places">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</string>
+    <string name="api_key_streetview">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</string>
+    <string name="api_key_mtd">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</string>
+
+</resources>

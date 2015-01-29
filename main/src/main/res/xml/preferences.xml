@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="General Settings">
+        <PreferenceScreen
+            android:key="button_ui_category_key"
+            android:persistent="false"
+            android:title="@string/ui"
+            >
+            <CheckBoxPreference
+                android:defaultValue="false"
+                android:key="pref_ui_category_slide_up_default_height"
+                android:summary="@string/pref_ui_category_slide_up_default_height_summary"
+                android:title="@string/pref_ui_category_slide_up_default_height_title"
+                />
+            <PreferenceCategory
+                android:title="@string/navigation">
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:key="pref_ui_navigation_home_screen_enabled"
+                    android:summary="@string/home_screen_enabled_summary"
+                    android:title="@string/home_screen_enabled_title"/>
+                <com.teamparkin.mtdapp.preferences.ListPreferenceShowSummary
+                    android:dependency="pref_ui_navigation_home_screen_enabled"
+                    android:entries="@array/pref_ui_navigation_home_screen_entries"
+                    android:entryValues="@array/pref_ui_navigation_home_screen_entry_values"
+                    android:defaultValue="0"
+                    android:key="pref_ui_navigation_home_screen"
+                    android:title="@string/home_screen"
+                    />
+            </PreferenceCategory>
+            <PreferenceCategory
+                android:title="@string/map">
+                <CheckBoxPreference
+                    android:defaultValue="false"
+                    android:key="pref_ui_map_hide_nav_drawer_icon"
+                    android:summary="@string/pref_ui_map_hide_nav_drawer_icon_summary"
+                    android:title="@string/pref_ui_map_hide_nav_drawer_icon_title"/>
+            </PreferenceCategory>
+        </PreferenceScreen>
+        <PreferenceScreen
+            android:title="@string/data_storage">
+            <PreferenceCategory
+                android:title="@string/place_cache"
+                android:summary="@string/place_cache_summary">
+                <com.teamparkin.mtdapp.preferences.EditTextPreferenceNumericConstrained
+                    android:key="pref_data_storage_place_cache_max_size"
+                    android:title="@string/max_cache_size"
+                    android:summary="@string/max_place_cache_size_summary"
+                    android:defaultValue="100"
+                    android:inputType="number"/>
+            </PreferenceCategory>
+        </PreferenceScreen>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="pref_key_about_category"
+        android:title="@string/about">
+        <Preference
+            android:title="@string/about_app">
+            <intent
+                android:action="com.teamparkin.mtdapp.ABOUT"
+                android:targetClass="com.teamparkin.mtdapp.SettingsActivity"
+                android:targetPackage="com.teamparkin.mtdapp"/>
+        </Preference>
+    </PreferenceCategory>
+
+</PreferenceScreen>

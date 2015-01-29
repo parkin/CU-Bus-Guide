@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mtdapp="http://schemas.android.com/apk/res-auto" >
+
+    <item
+        android:id="@+id/menu_search"
+        android:actionViewClass="android.support.v7.widget.SearchView"
+        android:icon="@drawable/ic_action_search"
+        android:showAsAction="ifRoom|collapseActionView"
+        android:title="Search"
+        mtdapp:actionViewClass="android.support.v7.widget.SearchView"
+        mtdapp:showAsAction="ifRoom|collapseActionView"/>
+
+    <!-- cite this beer icon http://icons8.com/ -->
+    <item
+        android:id="@+id/menu_donate"
+        android:icon="@drawable/ic_action_beer"
+        android:title="Donate"
+        mtdapp:showAsAction="never"/>
+
+    <item
+        android:id="@+id/menu_settings"
+        android:showAsAction="never"
+        android:title="@string/settings"
+        />
+
+</menu>

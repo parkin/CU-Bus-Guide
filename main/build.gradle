@@ -1,0 +1,43 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion "21.1.2"
+
+    defaultConfig {
+        minSdkVersion 9
+        targetSdkVersion 21
+        versionCode 21
+        versionName "2.0.7"
+    }
+
+    buildTypes {
+
+        debug {
+            // set its package to be <app package>.debug to be able to install both debug and release apk on the same device
+            // packageNameSuffix ".debug"
+        }
+
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.android.support:gridlayout-v7:19.0.1'
+    compile 'com.android.support:support-v4:21.0.3'
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile 'com.google.android.gms:play-services:4.2.42'
+    compile 'com.github.flavienlaurent.datetimepicker:library:0.0.1'
+    compile 'com.mcxiaoke.volley:library:1.0.+'
+    compile 'com.squareup.picasso:picasso:2.4.+'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.nhaarman.listviewanimations:lib-core:3.1.0@aar'
+    compile 'com.nhaarman.listviewanimations:lib-manipulation:3.1.0@aar'
+    compile 'com.nhaarman.listviewanimations:lib-core-slh:3.1.0@aar'
+    compile project(':ViewPagerIndicator:library')
+    compile project(':AndroidSlidingUpPanel:library')
+    compile project(':StickyScrollViewItems:library')
+}

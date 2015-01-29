@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_holo_light_darker"
+    android:orientation="vertical"
+    android:paddingTop="?attr/paddingForActionBar" >
+
+    <TextView
+        android:id="@+id/stoplist_no_stops"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="No favorites yet, search or use the map to add your favorite locations!"
+        android:visibility="gone" />
+
+    <ListView
+        android:id="@+id/stoplist_list2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@android:color/transparent" >
+    </ListView>
+
+</LinearLayout>

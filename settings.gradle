@@ -1,0 +1,2 @@
+include ':main', ':ViewPagerIndicator:library', ':AndroidSlidingUpPanel:library'
+include ':StickyScrollViewItems:library'

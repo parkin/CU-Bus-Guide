@@ -1,0 +1,10 @@
+# Need to unignore every parent directory of files that we want to unignore.
+# This is all to unignore mapping.txt, we'll need it for user stack traces.
+# http://stackoverflow.com/questions/5533050/gitignore-exclude-folder-but-include-specific-subfolder
+!build/
+build/*
+!build/proguard/
+build/proguard/*
+!build/proguard/release/
+build/proguard/release/*
+!build/proguard/release/mapping.txt

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal" >
+
+    <com.teamparkin.mtdapp.views.LocationItemView
+        android:id="@+id/mylocationlistitem_locationitem"
+        android:layout_width="0dip"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+    </com.teamparkin.mtdapp.views.LocationItemView>
+
+    <ImageButton
+        android:id="@+id/mylocationlistitem_overflow_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:contentDescription="action overflow"
+        android:src="@drawable/ic_action_overflow" />
+
+</LinearLayout>

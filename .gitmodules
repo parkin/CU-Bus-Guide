@@ -1,0 +1,9 @@
+[submodule "AndroidSlidingUpPanel"]
+	path = AndroidSlidingUpPanel
+	url = git@github.com:parkin/AndroidSlidingUpPanel.git
+[submodule "StickyScrollViewItems"]
+	path = StickyScrollViewItems
+	url = git@github.com:parkin/StickyScrollViewItems.git
+[submodule "ViewPagerIndicator"]
+	path = ViewPagerIndicator
+	url = git@github.com:parkin/Android-ViewPagerIndicator.git

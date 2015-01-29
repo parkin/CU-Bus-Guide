@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+     Do NOT change without Will's approval app version - database version
+	 * 2.0.1: 5
+    -->
+    <integer name="mtdapi_database_version">5</integer>
+
+    <!--
+     Do NOT change without Will's approval app version - database version
+	 * 2.0.0: 1
+    -->
+    <integer name="database_mylocation_version">1</integer>
+
+</resources>

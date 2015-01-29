@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mtdapp="http://schemas.android.com/apk/res-auto" >
+
+    <!-- TODO cite http://icons8.com/ for use of this icon -->
+    <item
+        android:id="@+id/show_on_map"
+        android:icon="@drawable/ic_action_map"
+        android:orderInCategory="10"
+        android:showAsAction="ifRoom"
+        mtdapp:showAsAction="ifRoom"
+        android:title="@string/show_on_map">
+    </item>
+
+</menu>

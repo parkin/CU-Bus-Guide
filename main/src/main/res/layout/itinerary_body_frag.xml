@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clickable="true"
+    android:orientation="vertical" >
+
+    <include layout="@layout/itinerary_slideup_head" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_holo_light_darker" >
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:background="@drawable/google_now_card"
+            android:padding="10dp" >
+
+            <android.support.v7.widget.GridLayout
+                android:id="@+id/itin_body_body"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:columnCount="3" >
+            </android.support.v7.widget.GridLayout>
+        </FrameLayout>
+    </ScrollView>
+
+</LinearLayout>

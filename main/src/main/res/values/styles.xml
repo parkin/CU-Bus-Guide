@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+
+    <style name="Theme.AppCompat.Light.DarkActionBar.NavbarOverlay" parent="@style/Theme.AppCompat.Light.DarkActionBar">
+        <item name="paddingForActionBar">0dip</item>
+    </style>
+
+    <style name="Animations" />
+
+</resources>

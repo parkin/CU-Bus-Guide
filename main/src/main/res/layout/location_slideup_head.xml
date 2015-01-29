@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <LinearLayout
+        android:id="@+id/location_head_dragview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_half_fade"
+        android:orientation="horizontal" >
+
+        <com.teamparkin.mtdapp.views.LocationItemView
+            android:id="@+id/location_slide_head"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/abc_list_selector_holo_light"
+            android:orientation="vertical"
+            android:paddingBottom="15dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingTop="15dp" >
+        </com.teamparkin.mtdapp.views.LocationItemView>
+
+        <View
+            android:layout_width="1px"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/LightGrey" >
+        </View>
+
+        <ImageButton
+            android:id="@+id/location_slide_navigate"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:background="@drawable/abc_list_selector_holo_light"
+            android:contentDescription="Plan a trip to this location."
+            android:padding="16dp"
+            android:src="@drawable/ic_action_navigate_blue_dark" />
+    </LinearLayout>
+
+</merge>

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    package="com.teamparkin.mtdapp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+
+    <permission
+        android:name="com.teamparkin.mtdapp.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.teamparkin.mtdapp.permission.MYLOCATION_PROVIDER_WRITE"
+        android:description="@string/mylocationprovider_write_permission_label"
+        android:label="@string/mylocationprovider_write_permission_desc"
+        android:protectionLevel="signature"/>
+    <permission
+        android:name="com.teamparkin.mtdapp.permission.MYLOCATION_PROVIDER_READ"
+        android:description="@string/mylocationprovider_read_permission_desc"
+        android:label="@string/mylocationprovider_read_permission_label"
+        android:protectionLevel="signatureOrSystem"/>
+
+    <uses-permission android:name="com.android.vending.BILLING"/>
+    <uses-permission android:name="com.teamparkin.mtdapp.permission.MAPS_RECEIVE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true"/>
+
+    <application
+        tools:replace="android:allowBackup"
+        android:allowBackup="false"
+        android:hardwareAccelerated="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/Theme.AppCompat.Light.DarkActionBar.NavbarOverlay">
+        <uses-library android:name="com.google.android.maps"/>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version"/>
+
+        <activity
+            android:name="com.teamparkin.mtdapp.MTDAppActivity"
+            android:label="@string/app_name"
+            android:launchMode="singleTop">
+            <intent-filter>
+                <category android:name="android.intent.category.LAUNCHER"/>
+
+                <action android:name="android.intent.action.MAIN"/>
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH"/>
+            </intent-filter>
+
+            <meta-data
+                android:name="android.app.searchable"
+                android:resource="@xml/searchable"/>
+        </activity>
+        <activity
+            android:name="com.teamparkin.mtdapp.DonateActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"/>
+        <activity
+            android:name="com.teamparkin.mtdapp.SettingsActivity"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTop"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar.NoNavbarOverlay"/>
+        <activity
+            android:name="com.teamparkin.mtdapp.AboutActivity"
+            android:excludeFromRecents="true"
+            android:label="@string/about_app"/>
+
+        <provider
+            android:name="com.teamparkin.mtdapp.contentproviders.StopsProvider"
+            android:authorities="com.teamparkin.mtdapp.contentproviders.StopsProvider"
+            android:exported="false"/>
+        <provider
+            android:name="com.teamparkin.mtdapp.contentproviders.MyLocationContentProvider"
+            android:authorities="com.teamparkin.mtdapp.contentprovider.mylocation"
+            android:exported="true"
+            android:readPermission="com.teamparkin.mtdapp.permission.MYLOCATION_PROVIDER_READ"
+            android:writePermission="com.teamparkin.mtdapp.permission.MYLOCATION_PROVIDER_WRITE"/>
+
+        <service
+            android:name="com.teamparkin.mtdapp.DatabaseClearingService"
+            android:enabled="true"/>
+        <service
+            android:name="com.teamparkin.mtdapp.MtdGtfsService"
+            android:enabled="true"/>
+        <service
+            android:name="com.teamparkin.mtdapp.widget.WidgetViewsService"
+            android:enabled="true"
+            android:permission="android.permission.BIND_REMOTEVIEWS"/>
+        <!-- The widget update service for preHoneycomb devices -->
+        <service
+            android:name="com.teamparkin.mtdapp.widget.WidgetViewsServicePreHoneycomb"
+            android:enabled="true"/>
+
+        <!-- The widget provider -->
+        <receiver android:name="com.teamparkin.mtdapp.widget.MtdAppWidgetProvider">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE"/>
+            </intent-filter>
+            <!-- This specifies the widget provider info -->
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widgetinfo"/>
+        </receiver>
+
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/api_key_maps"/>
+
+        <activity
+            android:name="com.teamparkin.mtdapp.DisplayTextFileActivity"
+            android:label="@string/title_activity_display_text_file">
+        </activity>
+    </application>
+
+</manifest>
